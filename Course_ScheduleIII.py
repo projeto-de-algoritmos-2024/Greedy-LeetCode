@@ -1,22 +1,25 @@
+import heapq
+
 class Solution(object):
     def scheduleCourse(self, courses):
-        lista = self.merge(courses)
-        print(lista)
+        # Ordena os cursos por prazo de entrega crescente
+        courses = self.merge(courses)
 
         tempo = 0
-        conta = 0
-        tarefas_realizadas = []
+        heap = []
 
-        while len(lista)>0:
-            aux = lista[0]
-            lista.remove(aux)
-            tempo+=aux[0]
-            if(tempo <= aux[1]):
-                tarefas_realizadas.append(aux)
-                conta+=1
-        print(conta)
+        for duracao, prazo in courses:
+            if tempo + duracao <= prazo:
+                # Adiciona a tarefa ao heap e atualiza o tempo
+                heapq.heappush(heap, -duracao)  
+                tempo += duracao
+            elif heap and -heap[0] > duracao:
+                # Substitui a tarefa mais longa por uma tarefa mais curta
+                tempo += duracao - (-heapq.heappop(heap))
+                heapq.heappush(heap, -duracao)
 
-        return conta
+        return len(heap)  
+
 
     def merge(self, lista):
         if len(lista)<=1:
@@ -41,8 +44,36 @@ class Solution(object):
 
         lista_ordenada = []
 
+        # while i<len(esquerda) and j<len(direita):
+        #     if esquerda[i][0] + esquerda[i][1] < direita[j][0] + direita[j][1]:
+        #         lista_ordenada.append(esquerda[i])
+        #         #print(esquerda[i], esquerda[i][1])
+        #         i+=1
+        #     elif esquerda[i][0] + esquerda[i][1] > direita[j][0] + direita[j][1]:
+        #         lista_ordenada.append(direita[j])
+        #         #print(direita[j], direita[j][1])
+        #         j+=1
+        #     elif esquerda[i][0] + esquerda[i][1] == direita[j][0] + direita[j][1]:
+        #         if esquerda[i][0] < direita[j][0]:
+        #             lista_ordenada.append(esquerda[i])
+        #             #print(esquerda[i], esquerda[i][1])
+        #             i+=1
+        #         elif esquerda[i][0] > direita[j][0]:
+        #             lista_ordenada.append(direita[j])
+        #             #print(direita[j], direita[j][1])
+        #             j+=1
+        #         elif esquerda[i][1] < direita[j][1]:
+        #             lista_ordenada.append(esquerda[i])
+        #             #print(esquerda[i], esquerda[i][1])
+        #             i+=1
+        #         elif esquerda[i][1] > direita[j][1]:
+        #             lista_ordenada.append(direita[j])
+        #             #print(direita[j], direita[j][1])
+        #             j+=1
+
+
         while i<len(esquerda) and j<len(direita):
-            if esquerda[i][1] <= direita[j][1]:
+            if esquerda[i][1] < direita[j][1]:
                 lista_ordenada.append(esquerda[i])
                 #print(esquerda[i], esquerda[i][1])
                 i+=1
@@ -50,13 +81,22 @@ class Solution(object):
                 lista_ordenada.append(direita[j])
                 #print(direita[j], direita[j][1])
                 j+=1
+            else:
+                if esquerda[i][0] <= direita[j][0]:
+                    lista_ordenada.append(esquerda[i])
+                    #print(esquerda[i], esquerda[i][1])
+                    i+=1
+                else:
+                    lista_ordenada.append(direita[j])
+                    #print(direita[j], direita[j][1])
+                    j+=1
 
         lista_ordenada.extend(esquerda[i:])
         lista_ordenada.extend(direita[j:])   
 
         return lista_ordenada     
 
-entrada = [[3,2],[4,3]]
+entrada = [[5,5],[4,6],[2,6]]
 
 tarefas = Solution()
 
