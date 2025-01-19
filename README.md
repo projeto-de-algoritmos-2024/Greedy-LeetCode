@@ -10,21 +10,33 @@
 | 21/1043727  |  [Pedro Cabeceira de Freitas](https://github.com/pkbceira03) |
 
 ## Sobre 
-Descreva os objetivos do seu projeto e como ele funciona. 
+O projeto consiste na resolução de 3 exercícios da plataforma LeetCode.
 
 ## Screenshots
 Adicione 3 ou mais screenshots do projeto em funcionamento.
 
 ## Instalação 
-**Linguagem**: xxxxxx<br>
-**Framework**: (caso exista)<br>
-Descreva os pré-requisitos para rodar o seu projeto e os comandos necessários.
+**Linguagem**: Python<br>
+**Framework**: n/a<br>
+
+**Ubuntu**:
+
+Para rodar, é preciso ter instalado o Python 3.
+
+```
+$ sudo apt-get update
+$ sudo apt-get install python3.6
+```
 
 ## Uso 
-Explique como usar seu projeto caso haja algum passo a passo após o comando de execução.
+Para testar o código na IDE de sua preferência, após realizada a instalação do Python3, você deve instanciar a classe Solution de cada arquivo. Em seguida, chame a primeira função declarada em cada arquivo com a quantidade e o tipo de argumentos especificados. Lembre-se de chamá-la dentro de uma função print() para visualizar o retorno do algoritmo via terminal.
+
+O código está otimizado para rodar no ambiente do LeetCode. Basta copiar e colar o código no link da respectiva questão (consultar links acima).
 
 ## Outros 
-Quaisquer outras informações sobre seu projeto podem ser descritas abaixo.
+Clique na thumbnail abaixo para acessar o vídeo no YouTube.
+
+[![Watch the video]()
 
 
 
