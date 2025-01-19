@@ -28,7 +28,7 @@ Link do Código (GitHub): [clique aqui](https://github.com/projeto-de-algoritmos
 
 Link do Problema: [clique aqui](https://leetcode.com/problems/course-schedule-iii/description/)<br>
 Link do Código (GitHub): [clique aqui](https://github.com/projeto-de-algoritmos-2024/Greedy-LeetCode/blob/master/Course_ScheduleIII.py) <br><br>
-![imagem 3]() <br>
+![imagem 3](imgs/course_scheduled.png) <br>
 
 
 ## Instalação 
@@ -49,10 +49,9 @@ Para testar o código na IDE de sua preferência, após realizada a instalação
 
 O código está otimizado para rodar no ambiente do LeetCode. Basta copiar e colar o código no link da respectiva questão (consultar links acima).
 
-## Outros 
-Clique na thumbnail abaixo para acessar o vídeo no YouTube.
+## Apresentação
+[Clique aqui](https://www.youtube.com/watch?v=eZt-yGgu1xA) para acessar o vídeo no YouTube.
 
-[![Watch the video]()
 
 
 
