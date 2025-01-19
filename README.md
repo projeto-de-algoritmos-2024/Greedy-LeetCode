@@ -12,8 +12,24 @@
 ## Sobre 
 O projeto consiste na resolução de 3 exercícios da plataforma LeetCode.
 
-## Screenshots
-Adicione 3 ou mais screenshots do projeto em funcionamento.
+### Minimum Cost to Hire K Workers (Hard)
+
+Link do Problema: [clique aqui](https://leetcode.com/problems/minimum-cost-to-hire-k-workers/description/) <br>
+Link do Código (GitHub): [clique aqui](https://github.com/projeto-de-algoritmos-2024/Greedy-LeetCode/blob/master/minimum_cost.py) <br><br>
+![imagem 1](imgs/minumum_cost_accepted.png)<br>
+
+### IPO (Hard)
+
+Link do Problema: [clique aqui](https://leetcode.com/problems/ipo/description/) <br>
+Link do Código (GitHub): [clique aqui](https://github.com/projeto-de-algoritmos-2024/Greedy-LeetCode/blob/master/IPO.py) <br><br>
+![imagem 2](imgs/IPO_accepted.png)<br>
+
+### Course Schedule III (Hard)
+
+Link do Problema: [clique aqui](https://leetcode.com/problems/course-schedule-iii/description/)<br>
+Link do Código (GitHub): [clique aqui](https://github.com/projeto-de-algoritmos-2024/Greedy-LeetCode/blob/master/Course_ScheduleIII.py) <br><br>
+![imagem 3]() <br>
+
 
 ## Instalação 
 **Linguagem**: Python<br>
